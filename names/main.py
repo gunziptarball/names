@@ -47,7 +47,7 @@ def main(csv_file, number=10, randomize=True, column_names='first_name,middle_na
     with open(csv_file) as f:
         name_parts = column_names.split(',')
         names = get_names(csv.DictReader(f))
-        number = min(number, len(names))
+
         while number > 0:
             if randomize:
                 print(generate_random(names, name_parts))
